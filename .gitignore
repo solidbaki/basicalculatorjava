@@ -1,12 +1,57 @@
-*.class
+package lab2;
+import java.util.Scanner;
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+public class lab2 {
+   public static void main(String[] args){
+	   Scanner scanner = new Scanner(System.in);
+	   int a,b,result; int choice = 0;
+	   
+	   System.out.println("*    Press 1 to calculate POWER           *");
+	   System.out.println("**   Press 2 to calculate SQUARE ROOT    **");
+	   System.out.println("***  Press 3 to calculate MAXIMUM       ***");
+	   System.out.println("**   Press 4 to calculate LOGARITHM      **");
+	   System.out.println("*    Press 5 to TERMINATE the program     *");
+	   System.out.println("What is your choice?");
+	   
+	   choice = scanner.nextInt();		   
+	   
+	   
+	   switch (choice) {
+	   
+	   case 1:
+		   System.out.println("First enter the base number, after that enter exponent to calculate power");
+		   a = scanner.nextInt();
+		   b = scanner.nextInt();
+		   result = (int) Math.pow(a,b);
+		   System.out.println(a + " to the power of " + b + " equals to " + result);
+		   break;
+		   
+	   case 2:
+		   System.out.println("Enter a number to calculate square root.");
+		   a = scanner.nextInt();
+		   result = (int) Math.sqrt(a);
+		   System.out.println("Square root of " + a + " is " + result);
+		   break;
+		   
+	   case 3:
+		   System.out.println("Enter two numbers to calculate maximum");
+		   a = scanner.nextInt();
+		   b = scanner.nextInt();
+		   result = (int) Math.max(a, b);
+		   System.out.println("Maximum of two numbers is " + result);
+		   break;		   
+		   
+	   case 4:
+		   System.out.println("Enter a number to calculate logarithm.");
+		   a = scanner.nextInt();
+		   result = (int) Math.log(a);
+		   System.out.println("The result of logarithm is " + result);
+		   break;
+		   
+	   case 5:
+	       System.out.println("Program terminating...");
+		   return;
+	   }
+	   
+   }
+}
