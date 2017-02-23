@@ -50,8 +50,11 @@ public class lab2 {
 		   
 	   case 5:
 	       System.out.println("Program terminating...");
-		   return;
+		   System.exit(0);
+		   
 	   }
-	   
+	   scanner.close();
    }
+   
 }
+
